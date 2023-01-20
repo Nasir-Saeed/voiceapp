@@ -1,23 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Alan Example</title>
+  <meta charset="UTF-8">
+  <title>Web Engineering  -- Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
+
+<style>
+  body {
+    height: 80vh;
+    background-color: #101242
+  }
+
+  .card {
+    margin: 500px 20px;
+    text-align: center;
+  }
+
+  .img {
+    position: absolute;
+    top: 80px;
+    border-radius: 22px;
+    border-radius: 22px;
+    left: 500px;
+    height: 350px;
+  }
+
+  .footer {
+    text-align: center;
+    color: antiquewhite;
+    margin-top: 20px;
+  }
+</style>
+
 <body>
-<div class="alan-btn"></div>
-<script type="text/javascript"
- src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
-<script>
-  var alanBtnInstance = alanBtn({
-    key: "07db950a9b6ee69d56aa65a6b13ab0782e956eca572e1d8b807a3e2338fdd0dc/stage",
-    onCommand: function (commandData) {
-      if (commandData.command === "go:back") {
-        //call client code that will react to the received command
-      }
-    },
-    rootEl: document.getElementById("alan-btn"),
-  });
-</script>
+  <div>
+    <img class="img" src="./logo.jpeg" alt="logo">
+  </div>
+  <div class="container ">
+    <div class="row box">
+      <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">Latest News</div>
+        <div class="card-body">
+          <h5 class="card-title">Try saying:</h5>
+          <p class="card-text">Give me the latest news</p>
+        </div>
+      </div>
+      <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">News by Categories</div>
+        <div class="card-body">
+          <h5 class="card-title">Categories:</h5>
+          <p class="card-text">Business, Entertainment, General, Health, Science, Sports, Technology.</p>
+          <br>
+          <h4 class="card-title">Try saying:</h4>
+          <p class="card-text">Give me the latest Technology news</p>
+        </div>
+      </div>
+      <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">News by Terms</div>
+        <div class="card-body">
+          <h5 class="card-title">Terms:</h5>
+          <p class="card-text">Bitcoin, PlayStation 5, Smartphones, Donald Trump...</p>
+          <br>
+          <h4 class="card-title">Try saying:</h4>
+          <p class="card-text">What's up with PlayStation 5</p>
+        </div>
+      </div>
+
+      <div class="card text-bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">News by Sources</div>
+        <div class="card-body">
+          <h5 class="card-title">Sources:</h5>
+          <p class="card-text">CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...</p>
+          <br>
+          <h4 class="card-title">Try saying:</h4>
+          <p class="card-text">Give me the news from CNN</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alan-btn"></div>
+
+  <h5 class="footer">Created by - Nasir Saeed || Shahzaib Zain</h5>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+  <script>
+    var alanBtnInstance = alanBtn({
+      key: "07db950a9b6ee69d56aa65a6b13ab0782e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "go:back") {
+          //call client code that will react to the received command
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+  </script>
 </body>
+
 </html>
